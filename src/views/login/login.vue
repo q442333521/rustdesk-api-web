@@ -112,6 +112,7 @@
   import oidcImage from '@/assets/oidc.png'
   import webauthImage from '@/assets/webauth.png'
   import defaultImage from '@/assets/oidc.png'
+  import mainImage from '@/assets/main.jpg';
 
   const providerImageMap = {
     google: googleImage,
@@ -119,6 +120,7 @@
     oidc: oidcImage,
     // WebAuth: webauthImage,
     default: defaultImage,
+    main: mainImage,
   }
 
   const getProviderImage = (provider) => {
@@ -168,7 +170,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #2d3a4b;
+  /* 修改这里,添加背景图 */
+  background-image: url('@/assets/main.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -266,7 +272,7 @@ h1 {
 }
 
 .login-logo {
-  width: 80px;
+  width: 170px;
   height: 80px;
   margin: 0 auto 20px;
   display: block;
